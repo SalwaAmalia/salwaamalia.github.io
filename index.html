@@ -1,42 +1,71 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Salwa Amalia</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salwa Amalia | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+
+  <header class="container">
     <h1>Salwa Amalia</h1>
-    <p>Back End Developer | Ruby on Rails & Laravel</p>
+    <nav>
+      <a href="#about">Tentang</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projek</a>
+      <a href="#contact">Kontak</a>
+      <button id="mode-toggle">🌙</button>
+    </nav>
   </header>
 
-  <section class="about">
+  <section id="about" class="container">
     <h2>Tentang Saya</h2>
-    <p>Saya adalah Back End Developer dengan 3 tahun pengalaman membangun aplikasi menggunakan Ruby on Rails dan Laravel. Passion saya adalah menulis kode bersih dan scalable, serta membuat produk berkualitas tinggi untuk klien.</p>
+    <p>Saya Salwa Amalia, seorang Back End Developer dengan pengalaman 3 tahun membangun web dan aplikasi menggunakan Ruby on Rails dan Laravel. Saya suka menulis kode yang bersih dan scalable!</p>
   </section>
 
-  <section class="skills">
-    <h2>Keahlian</h2>
-    <ul>
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <ul class="skills-list">
       <li>Ruby on Rails</li>
-      <li>PHP Laravel & CodeIgniter</li>
-      <li>HTML/CSS & JavaScript</li>
-      <li>PostgreSQL & MySQL</li>
+      <li>PHP & Laravel</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>PostgreSQL, MySQL</li>
     </ul>
   </section>
 
-  <section class="projects">
-    <h2>Proyek</h2>
-    <ul>
-      <li><strong>Eresto ERP</strong> - Sistem ERP untuk manajemen produksi</li>
-      <li><strong>JNC Cookies App</strong> - Aplikasi pemesanan cookies untuk pelanggan dan admin</li>
-    </ul>
+  <section id="projects" class="container">
+    <h2>Projek</h2>
+    <div class="project-cards">
+      <div class="card">
+        <h3>Eresto ERP</h3>
+        <p>ERP System berbasis web untuk manajemen inventaris dan produksi.</p>
+      </div>
+      <div class="card">
+        <h3>JNC Cookies App</h3>
+        <p>Aplikasi pemesanan cookies online berbasis Laravel & Vue.js.</p>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Salwa Amalia • <a href="mailto:salwa@email.com">Email</a> • <a href="https://github.com/salwaamalia">GitHub</a></p>
+  <section id="contact" class="container">
+    <h2>Kontak</h2>
+    <p>Email: salwa@example.com</p>
+    <p>LinkedIn: linkedin.com/in/salwaamalia</p>
+    <a href="CV_Salwa Amalia.pdf" class="download-btn" download>📄 Download CV</a>
+  </section>  
+
+  <footer class="container">
+    <p>© 2025 Salwa Amalia. All rights reserved.</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('mode-toggle');
+    toggle.addEventListener('click', function() {
+      document.body.classList.toggle('dark');
+      toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
+
 </body>
 </html>
